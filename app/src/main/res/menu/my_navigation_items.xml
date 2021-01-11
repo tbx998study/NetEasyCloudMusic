@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/found"
+        android:icon="@mipmap/found"
+        android:title="@string/found" />
+    <item
+        android:id="@+id/video"
+        android:icon="@mipmap/video"
+        android:title="@string/video" />
+    <item
+        android:id="@+id/my"
+        android:icon="@mipmap/music"
+        android:title="@string/my" />
+    <item
+        android:id="@+id/radio"
+        android:icon="@mipmap/radio"
+        android:title="@string/radio" />
+
+    <item
+        android:id="@+id/account"
+        android:icon="@mipmap/account"
+        android:title="@string/account" />
+</menu>

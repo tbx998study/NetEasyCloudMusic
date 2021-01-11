@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.ValidateActivity">
+
+    <RelativeLayout
+        android:id="@+id/ly_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/img_back_login"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/left_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/phone_validate"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/register_tip_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/ly_top_bar"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:id="@+id/validate_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/validate_tip"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/send_to"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/validate_tip"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/send_to" />
+
+        <TextView
+            android:id="@+id/phone_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/validate_tip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/send_to"
+            android:text="15600736852" />
+
+        <TextView
+            android:id="@+id/resend_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:text="@string/resend" />
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/edit_validate_code"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/register_tip_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="@string/input_validate"
+        android:inputType="number" />
+
+</RelativeLayout>

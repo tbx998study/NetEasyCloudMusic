@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:layout_marginTop="35dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/homeSearchBar"
+                android:layout_width="match_parent"
+                android:layout_height="40dp">
+
+                <EditText
+                    android:id="@+id/edit_search"
+                    android:layout_width="250dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/shape_search"
+                    android:drawableLeft="@mipmap/search"
+                    android:drawablePadding="-50dp"
+                    android:gravity="center"
+                    android:hint="@string/search_tip"
+                    android:paddingLeft="60dp"
+                    android:textSize="12sp" />
+            </RelativeLayout>
+
+            <com.youth.banner.Banner
+                android:id="@+id/homeBanner"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/homeSearchBar"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp" />
+
+            <HorizontalScrollView
+                android:id="@+id/homeRound"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_below="@id/homeBanner"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcHomeRound"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:scrollbars="none" />
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/txtRecommendSongs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/homeRound"
+                android:layout_marginLeft="10dp"
+                android:text="@string/recommend_songs"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <HorizontalScrollView
+                android:id="@+id/recommendSongs"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_below="@id/txtRecommendSongs"
+                android:layout_margin="10dp"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcRecommendSongs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:overScrollMode="never" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/txtTopArtist"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:text="@string/top_artist"
+                android:textColor="@android:color/black"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rcTopArtist"
+                android:overScrollMode="never"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

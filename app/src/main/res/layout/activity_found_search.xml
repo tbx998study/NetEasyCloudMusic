@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.FoundSearchActivity">
+
+    <RelativeLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_marginTop="35dp"
+        android:layout_height="40dp">
+
+        <EditText
+            android:id="@+id/edit_search"
+            android:layout_width="350dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/shape_search"
+            android:drawableLeft="@mipmap/search"
+            android:drawablePadding="10dp"
+            android:hint="@string/search_tip"
+            android:paddingLeft="10dp"
+            android:selectAllOnFocus="true"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtCancel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@id/edit_search"
+            android:text="@string/cancel"
+            android:textColor="@android:color/black" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txtHotsearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_bar"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/hot_search"
+        android:textColor="@android:color/black" />
+
+    <View
+        android:id="@+id/hotSearchSlide"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/txtHotsearch"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/navigate_dark" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hotSearchSlide"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcHotSearch"
+            android:layout_width="match_parent"
+            android:overScrollMode="never"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_bar"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcSearchResult"
+            android:overScrollMode="never"
+            android:visibility="invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

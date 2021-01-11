@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtRecentSongs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@mipmap/home_singer_play"
+        android:drawablePadding="5dp"
+        android:text="@string/latest_hot"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/singer_home_more"
+        android:layout_width="60dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/shape_singer_home_more"
+        android:gravity="center"
+        android:text="@string/more_hot_singer"
+        android:textColor="@android:color/black"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/ly_singer_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtRecentSongs"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/singer_home_hot_songs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/singer_home_first_slide"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/ly_singer_home"
+        android:layout_marginTop="10dp"
+        android:background="@color/navigate_dark" />
+
+    <RelativeLayout
+        android:id="@+id/rl_latest_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/singer_home_first_slide">
+
+        <TextView
+            android:id="@+id/txtLatestSongs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/latest_music"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgLatestSong"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@id/txtLatestSongs"
+            android:layout_margin="10dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/xzq" />
+
+        <TextView
+            android:id="@+id/txtSongName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtLatestSongs"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/imgLatestSong"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/txtSingerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtSongName"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/imgLatestSong"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/singer_home_second_slide"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@id/rl_latest_music"
+        android:layout_marginTop="10dp"
+        android:background="@color/navigate_dark" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/singer_home_second_slide">
+
+        <TextView
+            android:id="@+id/txtBaseInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/base_info"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtSingerInfoMore"
+            android:layout_width="60dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="13dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/shape_singer_home_more"
+            android:gravity="center"
+            android:text="@string/more_info"
+            android:textColor="@android:color/black"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtSingerBaseNameTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtBaseInfo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="昵称:"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txtSingerBaseName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtBaseInfo"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/txtSingerBaseNameTip"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txtSingerBaseSexTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtSingerBaseNameTip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="性别:"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txtSingerBaseSex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtSingerBaseNameTip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/txtSingerBaseSexTip"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txtSingerBaseLocationTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtSingerBaseSexTip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="地区:"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txtSingerBaseLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtSingerBaseSexTip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/txtSingerBaseLocationTip"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txtSingerBaseSummaryTip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtSingerBaseLocationTip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:text="简介:"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/txtSingerBaseSummary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="10"
+            android:layout_below="@id/txtSingerBaseLocationTip"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@id/txtSingerBaseSummaryTip"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

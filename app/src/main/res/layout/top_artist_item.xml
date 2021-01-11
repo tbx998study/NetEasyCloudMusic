@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/rlTopArtist"
+    android:layout_height="100dp">
+
+    <TextView
+        android:id="@+id/txtTopLastRank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:padding="8dp"
+        android:text="1"
+        android:textColor="@android:color/holo_red_light" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTop"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/txtTopLastRank"
+        app:cardCornerRadius="10dp">
+
+        <ImageView
+            android:id="@+id/imgTopSinger"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/xzq" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/txtSingerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/cardTop"
+        android:padding="8dp"
+        android:text="薛之谦"
+        android:textColor="@android:color/black"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/txtSingerScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtSingerName"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/cardTop"
+        android:drawableLeft="@mipmap/fire"
+        android:text="200" />
+</RelativeLayout>

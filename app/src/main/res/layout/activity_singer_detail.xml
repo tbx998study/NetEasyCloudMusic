@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.SingerDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:src="@mipmap/left_arrow_white" />
+
+            <TextView
+                android:id="@+id/txtSingerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@id/img_back"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:visibility="invisible" />
+
+            <ImageView
+                android:id="@+id/imgSingerPic"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/txtSingerImgName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="180dp"
+                android:text="薛之谦"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtSingerImgRank"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtSingerImgName"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:text="歌手榜华语地区 No."
+                android:textColor="@android:color/white"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtSingerImgRankNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtSingerImgName"
+                android:layout_marginTop="3dp"
+                android:layout_toRightOf="@id/txtSingerImgRank"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtSingerImgRuzhu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtSingerImgRank"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="3dp"
+                android:text="入驻艺人"
+                android:textSize="10sp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/txtSingerImgRuzhu"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/shape_singer_main">
+
+                <RadioGroup
+                    android:id="@+id/singer_radio"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/singer_home"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="主页" />
+
+                    <RadioButton
+                        android:id="@+id/singer_song"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="歌曲" />
+
+                    <RadioButton
+                        android:id="@+id/singer_album"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:gravity="center"
+                        android:text="专辑" />
+
+                </RadioGroup>
+
+                <View
+                    android:id="@+id/radioGroupSlide"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_below="@id/singer_radio"
+                    android:background="@color/navigate_dark" />
+
+                <FrameLayout
+                    android:id="@+id/fl_singer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/radioGroupSlide" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

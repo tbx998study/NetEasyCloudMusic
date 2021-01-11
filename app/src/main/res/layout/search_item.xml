@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/search_item"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txtSongName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"
+        android:text="布拉格广场"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/txtSinger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtSongName"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="5dp"
+        android:text="蔡依林" />
+
+    <TextView
+        android:id="@+id/txtSongAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtSongName"
+        android:layout_gravity="right"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/txtSinger"
+        android:layout_marginLeft="20dp"
+        android:text="ceshi" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_below="@id/txtSinger"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/navigate_dark" />
+
+</RelativeLayout>

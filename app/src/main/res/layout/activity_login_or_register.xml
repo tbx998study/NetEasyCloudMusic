@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.LoginOrRegisterActivity">
+
+    <RelativeLayout
+        android:id="@+id/ly_top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/img_back_login"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:src="@mipmap/left_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/phone_login"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/register_tip_bar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/ly_top_bar"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/login_tip"
+            android:textColor="@android:color/black"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/register_tip"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/edit_phone"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@id/register_tip_bar"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:inputType="phone"
+        android:hint="@string/input_phone"
+        android:layout_marginRight="20dp"/>
+
+    <Button
+        android:id="@+id/btn_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/next_tip"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@id/edit_phone"
+        android:layout_marginTop="20dp"/>
+
+</RelativeLayout>
